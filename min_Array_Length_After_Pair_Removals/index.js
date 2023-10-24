@@ -49,28 +49,20 @@
 // 1 <= nums[i] <= 109
 // nums is sorted in non-decreasing order.
 
-:: Solution::
+// :: Solution ::
 
-var minLengthAfterRemovals = function (a) {
-    let lengthOfArray = a.length;
-
-    let i = 0;
-    let j = Math.trunc(lengthOfArray / 2);
-    let count = 0;
-    while (i < j && j < lengthOfArray) { // Divided in the Two Parts, Left --> Right and Right --> End
-        let L = a[i];
-        let R = a[j];
-
-        if (L < R) {
-            i++;
-            j++;
-            count += 2
+var minLengthAfterRemovals = function (nums) {
+    let length = nums.length
+    let res = 0
+    let i = 0
+    let j = Math.floor((length + 1) / 2)
+    while (i < Math.floor(length / 2) && j < length) {
+        if (nums[i] < nums[j]) {
+            res += 2
         }
-        else {
-            j++; // we are increasing the j value ==> because for elimination we want i<j. so for that we need to increase j++ instead of i++
-        }
+        i++
+        j++
     }
-    return lengthOfArray - count;
-}
-const value = [1, 1, 2];
+    return length - res;
+};
 console.log(minLengthAfterRemovals(value));
