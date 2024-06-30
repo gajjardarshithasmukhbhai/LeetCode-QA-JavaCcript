@@ -65,4 +65,5 @@ var longestSubarray = function (nums, limit) {
 // Note: 41 to 28 become same if value need min,max or only max longestSubarray. but after code Where logic is started
 // nums[i] work like pointer and we used that to make our i => i++ increase so that, we got the window frame
 
-// This is Variable Sliding Algorithm 
+// This is Variable Sliding Algorithm
+// Chat Link: https://chatgpt.com/share/8df5983c-fe6b-480e-884e-68edc2ab01e6
