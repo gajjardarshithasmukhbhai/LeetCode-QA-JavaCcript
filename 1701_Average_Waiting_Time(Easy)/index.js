@@ -2,6 +2,8 @@
  * @param {number[][]} customers
  * @return {number}
  */
+
+// video Link for Dry Run: https://www.youtube.com/watch?v=g7P8Zkq8P9Q
 var averageWaitingTime = function(customers) {
     let customerWaitingTime = 0;
     let customerArrivingTime = customers[0][0];
