@@ -9,6 +9,8 @@
 // 2 => 4 
 // 4 no right choice so it will be -1
 
+
+// youtube link: https://www.youtube.com/watch?v=NXOOYYwpbg4&t=1097s
 const nearestGreaterRight = (values) => {
     const result = [];
     const stack = [];
