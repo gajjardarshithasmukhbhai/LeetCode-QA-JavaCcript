@@ -31,3 +31,24 @@ const nearestGreaterRight = (values) => {
     return result.reverse();
 }
 console.log(nearestGreaterRight([1,3,2,4]));
+
+// Using the Stack => Optimization from O(n^2) to O(n)
+let dataSets = [5,3,2,4];
+const nearestGreaterLeft = (dataValues) => {
+    let result = [];
+    let stack = [];
+    for(let i=0;i<dataValues.length;i++) {
+        while(stack.length>0 && dataValues[i]>stack[stack.length-1]) {
+            stack.pop();
+        }
+        if(stack.length === 0) {
+            result.push(-1);
+        }
+        if(dataValues[i]<stack[stack.length-1]) {
+            result.push(stack[stack.length-1]);
+        }
+        stack.push(dataValues[i]);
+    }
+    return result;
+}
+console.log(nearestGreaterLeft(dataSets)); // [-1,5,3,5] 
