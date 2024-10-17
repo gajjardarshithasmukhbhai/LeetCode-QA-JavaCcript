@@ -14,38 +14,38 @@
 const nearestGreaterRight = (values) => {
     const result = [];
     const stack = [];
-    for(let i=values.length-1;i>=0;i--) {
-        while(stack.length> 0 && values[i]>=stack[stack.length-1]) {
-            stack.pop();
+    for (let i = values.length - 1; i >= 0; i--) {
+        while (stack.length > 0 && values[i] >= stack[stack.length - 1]) {
+            stack.pop(); // this one is necessary
         }
-        if(stack.length === 0) {
+        if (stack.length === 0) {
             result.push(-1);
-            stack.push(values[i]);
+            // stack.push(values[i]); // this is not needed, it's in double
         }
         else {
-            result.push(stack[stack.length-1]);
-            stack.push(stack[stack.length-1]);
+            result.push(stack[stack.length - 1]);
+            // stack.push(stack[stack.length-1]); // this is not needed, because it make it as double
         }
         stack.push(values[i]);
     }
     return result.reverse();
 }
-console.log(nearestGreaterRight([1,3,2,4]));
+console.log(nearestGreaterRight([1, 3, 2, 4]));
 
 // Using the Stack => Optimization from O(n^2) to O(n)
-let dataSets = [5,3,2,4];
+let dataSets = [5, 3, 2, 4];
 const nearestGreaterLeft = (dataValues) => {
     let result = [];
     let stack = [];
-    for(let i=0;i<dataValues.length;i++) {
-        while(stack.length>0 && dataValues[i]>stack[stack.length-1]) {
+    for (let i = 0; i < dataValues.length; i++) {
+        while (stack.length > 0 && dataValues[i] > stack[stack.length - 1]) {
             stack.pop();
         }
-        if(stack.length === 0) {
+        if (stack.length === 0) {
             result.push(-1);
         }
-        if(dataValues[i]<stack[stack.length-1]) {
-            result.push(stack[stack.length-1]);
+        else {
+            result.push(stack[stack.length - 1]);
         }
         stack.push(dataValues[i]);
     }
