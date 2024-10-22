@@ -2,6 +2,7 @@
  * @param {number[]} heights
  * @return {number}
  */
+const heightsValue = [2, 1, 5, 6, 2, 3]
 var largestRectangleArea = function (heights) {
     const smHeightFromRight = [];
     const smHeightFromLeft = [];
@@ -41,3 +42,4 @@ var largestRectangleArea = function (heights) {
     }
     return finalResult;
 };
+console.log(largestRectangleArea(heightsValue));
