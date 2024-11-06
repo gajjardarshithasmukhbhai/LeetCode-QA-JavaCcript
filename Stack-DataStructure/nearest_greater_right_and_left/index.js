@@ -38,7 +38,7 @@ const nearestGreaterLeft = (dataValues) => {
     let result = [];
     let stack = [];
     for (let i = 0; i < dataValues.length; i++) {
-        while (stack.length > 0 && dataValues[i] > stack[stack.length - 1]) {
+        while (stack.length > 0 && dataValues[i] >= stack[stack.length - 1]) {
             stack.pop();
         }
         if (stack.length === 0) {
