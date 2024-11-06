@@ -1,4 +1,4 @@
-
+// simple solution without O(1)
 var MinStack = function () {
     this.stack = [];
     this.supportive_stack = [];
@@ -47,6 +47,59 @@ MinStack.prototype.getMin = function () {
         return -1;
     }
     return this.supportive_stack[this.supportive_stack.length - 1];
+};
+
+// simple solution with O(1)
+var MinStack = function () {
+    this.stack = [];
+    this.minEle = 0;
+};
+
+MinStack.prototype.push = function (val) {
+    if (this.stack.length === 0) {
+        this.minEle = val;
+        this.stack.push(val);
+    } else {
+        if (val >= this.minEle) {
+            this.stack.push(val);
+        } else {
+            this.stack.push(2 * val - this.minEle);
+            this.minEle = val;
+        }
+    }
+};
+
+
+MinStack.prototype.pop = function () {
+    if (this.stack.length === 0) {
+        return -1;
+    } else {
+        if (this.stack[this.stack.length - 1] > this.minEle) {
+            this.stack.pop();
+        } else {
+            this.minEle = 2 * this.minEle - this.stack[this.stack.length - 1];
+            this.stack.pop();
+        }
+    }
+};
+
+
+MinStack.prototype.top = function () {
+    if (this.stack.length === 0) {
+        return -1; // or an error if needed
+    }
+    if (this.stack[this.stack.length - 1] > this.minEle) {
+        return this.stack[this.stack.length - 1];
+    }
+    return this.minEle;
+};
+
+
+MinStack.prototype.getMin = function () {
+    if (this.stack.length === 0) {
+        return -1;
+    }
+    return this.minEle;
 };
 
 /** 
