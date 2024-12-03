@@ -26,3 +26,4 @@ https://docs.google.com/spreadsheets/d/1EAk9RhWCYQgi26pH23tNjWY52Ff8MKnljsYeyvhc
 https://docs.google.com/spreadsheets/d/1BvNKHb2fRXxFoaLEjvXzlKXRe3I0byHC6Vco41DE0Nc/edit?usp=sharing
 
 - Topic Wise Practices: https://neetcode.io/practice
+- Notes of mine: https://gist.github.com/gajjardarshithasmukhbhai/a56a104fb578c8777235e9acf1df7c62
