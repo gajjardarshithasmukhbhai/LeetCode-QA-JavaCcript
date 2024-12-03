@@ -15,6 +15,7 @@ var addSpaces = function (s, spaces) {
 };
 
 // multi pointer approach w/c slice approach
+// Key Note: so it's not mandate to use two pointer to solved this issue
 const s = "icodeinpython";
 const spaces = [1, 5, 7, 9];
 const addSpaces = (s, spaces) => {
