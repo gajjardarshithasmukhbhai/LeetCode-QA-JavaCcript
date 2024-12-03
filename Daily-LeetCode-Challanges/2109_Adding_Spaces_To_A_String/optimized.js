@@ -14,7 +14,7 @@ var addSpaces = function (s, spaces) {
     return finalResult.join(' ');
 };
 
-// multi pointer approach
+// multi pointer approach w/c slice approach
 const s = "icodeinpython";
 const spaces = [1, 5, 7, 9];
 const addSpaces = (s, spaces) => {
