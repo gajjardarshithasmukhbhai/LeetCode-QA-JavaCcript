@@ -20,11 +20,6 @@ var checkIfExist = function (arr) {
     let i = 0, j = 1;
 
     while (i < arr.length - 1) {
-        // Avoid self-pairing
-        if (i === j) {
-            j++;
-            continue;
-        }
 
         // Check if arr[j] is double of arr[i]
         if (arr[j] === 2 * arr[i]) {
