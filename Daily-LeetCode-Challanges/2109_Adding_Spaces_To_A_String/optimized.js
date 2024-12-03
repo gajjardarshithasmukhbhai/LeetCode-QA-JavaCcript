@@ -14,8 +14,8 @@ var addSpaces = function (s, spaces) {
     return finalResult.join(' ');
 };
 
-// multi pointer approach w/c slice approach
-// Key Note: so it's not mandate to use two pointer to solved this issue
+// multi pointer or two pointer approach w/c slice approach
+// we say two pointer approach because i for the string and startIndex for the spaces array) to solve the problem
 const s = "icodeinpython";
 const spaces = [1, 5, 7, 9];
 const addSpaces = (s, spaces) => {
