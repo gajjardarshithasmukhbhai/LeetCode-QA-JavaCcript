@@ -3,6 +3,8 @@
  * @param {number} k
  * @return {number}
  */
+
+// this sweep line approach
 var maximumBeauty = function (nums, k) {
     const events = [];
 
@@ -31,3 +33,6 @@ var maximumBeauty = function (nums, k) {
 
     return maxBeauty;
 };
+
+
+// multi pointer approach to solved the problem
