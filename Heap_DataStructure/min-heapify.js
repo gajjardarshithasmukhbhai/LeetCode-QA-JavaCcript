@@ -45,4 +45,6 @@ const heapSortMin = (arr) => {
 };
 
 // Example usage
-console.log(heapSortMin([3, 2, 3, 1, 2, 4, 5, 5, 6])); 
+console.log(heapSortMin([3, 2, 3, 1, 2, 4, 5, 5, 6]));
+console.log(maxHea);
+// O/P: [ 6, 5, 5, 4, 3, 3, 2, 2, 1 ]
