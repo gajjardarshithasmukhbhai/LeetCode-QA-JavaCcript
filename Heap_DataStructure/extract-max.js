@@ -1,3 +1,5 @@
+// Time Taken O(logn) for Extracting the Max Value
+
 const maxHeapify = (arr, length, parentIndex) => {
     let largest = parentIndex; // Initialize largest as parent
     let left = parentIndex * 2 + 1; // Left child index
@@ -31,7 +33,6 @@ const buildMaxHeap = (arr) => {
     }
 };
 
-// Time Taken O(logn) for Extracting the Max Value
 const extractMax = (arr) => {
     if (arr.length === 0) return null; // If heap is empty
     if (arr.length === 1) return arr.pop(); // Only one element in heap

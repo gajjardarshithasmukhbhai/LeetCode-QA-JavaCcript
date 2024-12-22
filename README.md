@@ -27,3 +27,7 @@ https://docs.google.com/spreadsheets/d/1BvNKHb2fRXxFoaLEjvXzlKXRe3I0byHC6Vco41DE
 
 - Topic Wise Practices: https://neetcode.io/practice
 - Notes of mine: https://gist.github.com/gajjardarshithasmukhbhai/a56a104fb578c8777235e9acf1df7c62
+
+### Time Complexity of Various Algo
+
+![IMG_8640](https://gist.github.com/user-attachments/assets/5f755b20-3c71-4bfd-aa0f-c10f021acf23)
