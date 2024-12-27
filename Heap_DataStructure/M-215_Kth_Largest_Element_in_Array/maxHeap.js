@@ -31,7 +31,8 @@ const minHeapify = (arr, length, parentIndex) => {
 var findKthLargest = function (arr, k) {
     let length = arr.length;
 
-    // Step 1: Build Min-Heap (Start from the last parent node)
+    // Step 1: Build Min-Heap (Start from the last parent node) // it's bubble up it mantain the Heap to call again and again
+    // also we can say ======> buildMinHeap or bubbleUp
     let lastParentIndex = Math.floor(length / 2 - 1);
     while (lastParentIndex >= 0) {
         minHeapify(arr, length, lastParentIndex);

@@ -1,3 +1,15 @@
+// [::Algorithm::] 
+
+// Step 1: Build a min heap from the input data.
+// => min Heap root always be on the TOP
+
+// step 2: At this point, the smallest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of tree. 
+// Repeat above steps while size of heap is greater than 1.
+// => we're replacing the value top element make last and last element make the top, through this approach we're sorting in descending order
+
+// Note: Heap Sort using min heap sorts in descending order where as max heap sorts in ascending order
+
+
 const minHeapify = (arr, length, parentIndex) => {
     let smallest = parentIndex; // Initialize smallest as parent
     let left = parentIndex * 2 + 1; // Left child index
@@ -46,5 +58,4 @@ const heapSortMin = (arr) => {
 
 // Example usage
 console.log(heapSortMin([3, 2, 3, 1, 2, 4, 5, 5, 6]));
-console.log(maxHea);
 // O/P: [ 6, 5, 5, 4, 3, 3, 2, 2, 1 ]
