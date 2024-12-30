@@ -1,4 +1,12 @@
-# Daily LeetCode Practice in JavaScript
+# LeetCode Quote
+
+```javascript
+console.log(
+  "Don't run behind number of questions on LeetCode. Try to learn concept first. If you know the concept, question will be fun for you"
+);
+```
+
+## Daily LeetCode Practice in JavaScript
 
 Welcome to my Daily LeetCode Practice repository! In this repository, I'll be regularly solving LeetCode problems using JavaScript. The primary focus of my daily practice includes solving problems related to arrays, strings, data structures, and algorithms. Each day, I will add a new solution to this repository, and you can find the code for that day in its corresponding folder.
 
